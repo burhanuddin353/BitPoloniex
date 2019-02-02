@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24F0E0F78F38C18518AC67A7 /* Pods_BitPoloniex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F9E9D7D3E6D18A3673B9A0 /* Pods_BitPoloniex.framework */; };
 		44AA11E3220628E40043BC77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11E2220628E40043BC77 /* AppDelegate.swift */; };
 		44AA11E5220628E40043BC77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11E4220628E40043BC77 /* ViewController.swift */; };
 		44AA11E8220628E40043BC77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11E6220628E40043BC77 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		44AA11E9220628E60043BC77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44AA11EC220628E60043BC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44AA11EE220628E60043BC77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8602A6210BF8C82CB730C69A /* Pods-BitPoloniex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPoloniex.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex.release.xcconfig"; sourceTree = "<group>"; };
+		C6F9E9D7D3E6D18A3673B9A0 /* Pods_BitPoloniex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPoloniex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24B3EF47253F3C519FF8CEC /* Pods-BitPoloniex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPoloniex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F0E0F78F38C18518AC67A7 /* Pods_BitPoloniex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B5C3858C6C302CD610B6F0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6F9E9D7D3E6D18A3673B9A0 /* Pods_BitPoloniex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		44AA11D6220628E40043BC77 = {
 			isa = PBXGroup;
 			children = (
 				44AA11E1220628E40043BC77 /* BitPoloniex */,
 				44AA11E0220628E40043BC77 /* Products */,
+				5B75DFC510492BA288D9DDB8 /* Pods */,
+				2B5C3858C6C302CD610B6F0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = BitPoloniex;
 			sourceTree = "<group>";
 		};
+		5B75DFC510492BA288D9DDB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F24B3EF47253F3C519FF8CEC /* Pods-BitPoloniex.debug.xcconfig */,
+				8602A6210BF8C82CB730C69A /* Pods-BitPoloniex.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44AA11F1220628E60043BC77 /* Build configuration list for PBXNativeTarget "BitPoloniex" */;
 			buildPhases = (
+				50D47DEA136CAB567B45F107 /* [CP] Check Pods Manifest.lock */,
 				44AA11DB220628E40043BC77 /* Sources */,
 				44AA11DC220628E40043BC77 /* Frameworks */,
 				44AA11DD220628E40043BC77 /* Resources */,
+				D0C484DA95F26012D06153B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50D47DEA136CAB567B45F107 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitPoloniex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0C484DA95F26012D06153B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44AA11DB220628E40043BC77 /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		44AA11F2220628E60043BC77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F24B3EF47253F3C519FF8CEC /* Pods-BitPoloniex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		44AA11F3220628E60043BC77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8602A6210BF8C82CB730C69A /* Pods-BitPoloniex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
