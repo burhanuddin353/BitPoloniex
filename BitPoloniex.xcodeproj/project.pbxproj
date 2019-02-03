@@ -13,6 +13,8 @@
 		44AA11E8220628E40043BC77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11E6220628E40043BC77 /* Main.storyboard */; };
 		44AA11EA220628E60043BC77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11E9220628E60043BC77 /* Assets.xcassets */; };
 		44AA11ED220628E60043BC77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11EB220628E60043BC77 /* LaunchScreen.storyboard */; };
+		44AA11F522062FDC0043BC77 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11F422062FDC0043BC77 /* Ticker.swift */; };
+		44AA11F922063C610043BC77 /* CurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11F822063C610043BC77 /* CurrencyPair.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		44AA11E9220628E60043BC77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44AA11EC220628E60043BC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44AA11EE220628E60043BC77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AA11F422062FDC0043BC77 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		44AA11F822063C610043BC77 /* CurrencyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPair.swift; sourceTree = "<group>"; };
 		8602A6210BF8C82CB730C69A /* Pods-BitPoloniex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPoloniex.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex.release.xcconfig"; sourceTree = "<group>"; };
 		C6F9E9D7D3E6D18A3673B9A0 /* Pods_BitPoloniex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPoloniex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24B3EF47253F3C519FF8CEC /* Pods-BitPoloniex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPoloniex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 			children = (
 				44AA11E2220628E40043BC77 /* AppDelegate.swift */,
 				44AA11E4220628E40043BC77 /* ViewController.swift */,
+				44AA11F422062FDC0043BC77 /* Ticker.swift */,
+				44AA11F822063C610043BC77 /* CurrencyPair.swift */,
 				44AA11E6220628E40043BC77 /* Main.storyboard */,
 				44AA11E9220628E60043BC77 /* Assets.xcassets */,
 				44AA11EB220628E60043BC77 /* LaunchScreen.storyboard */,
@@ -208,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44AA11F922063C610043BC77 /* CurrencyPair.swift in Sources */,
 				44AA11E5220628E40043BC77 /* ViewController.swift in Sources */,
+				44AA11F522062FDC0043BC77 /* Ticker.swift in Sources */,
 				44AA11E3220628E40043BC77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
