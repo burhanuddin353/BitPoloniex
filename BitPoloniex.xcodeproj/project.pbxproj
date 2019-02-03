@@ -18,7 +18,7 @@
 		44AA11EA220628E60043BC77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11E9220628E60043BC77 /* Assets.xcassets */; };
 		44AA11ED220628E60043BC77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11EB220628E60043BC77 /* LaunchScreen.storyboard */; };
 		44AA11F522062FDC0043BC77 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11F422062FDC0043BC77 /* Ticker.swift */; };
-		44AA11F922063C610043BC77 /* CurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11F822063C610043BC77 /* CurrencyPair.swift */; };
+		44AA11F922063C610043BC77 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11F822063C610043BC77 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		44AA11EC220628E60043BC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44AA11EE220628E60043BC77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44AA11F422062FDC0043BC77 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
-		44AA11F822063C610043BC77 /* CurrencyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPair.swift; sourceTree = "<group>"; };
+		44AA11F822063C610043BC77 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		8602A6210BF8C82CB730C69A /* Pods-BitPoloniex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPoloniex.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex.release.xcconfig"; sourceTree = "<group>"; };
 		C6F9E9D7D3E6D18A3673B9A0 /* Pods_BitPoloniex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitPoloniex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24B3EF47253F3C519FF8CEC /* Pods-BitPoloniex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitPoloniex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +60,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		449A169722078BF200DED54D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44AA11E4220628E40043BC77 /* TickerViewController.swift */,
+				449A168F22077A8D00DED54D /* LoginViewController.swift */,
+				449A169122077AA200DED54D /* RegistrationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		449A169822078C0D00DED54D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				449A16952207839D00DED54D /* AlertViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		449A169922078C2000DED54D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44AA11F422062FDC0043BC77 /* Ticker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		44AA11D6220628E40043BC77 = {
 			isa = PBXGroup;
 			children = (
@@ -83,12 +109,10 @@
 			children = (
 				44AA11E2220628E40043BC77 /* AppDelegate.swift */,
 				449A169322077F0300DED54D /* Network.swift */,
-				44AA11E4220628E40043BC77 /* TickerViewController.swift */,
-				449A168F22077A8D00DED54D /* LoginViewController.swift */,
-				449A169122077AA200DED54D /* RegistrationViewController.swift */,
-				44AA11F422062FDC0043BC77 /* Ticker.swift */,
-				44AA11F822063C610043BC77 /* CurrencyPair.swift */,
-				449A16952207839D00DED54D /* AlertViewController.swift */,
+				44AA11F822063C610043BC77 /* Constant.swift */,
+				449A169722078BF200DED54D /* ViewController */,
+				449A169922078C2000DED54D /* Model */,
+				449A169822078C0D00DED54D /* Extension */,
 				44AA11E6220628E40043BC77 /* Main.storyboard */,
 				44AA11E9220628E60043BC77 /* Assets.xcassets */,
 				44AA11EB220628E60043BC77 /* LaunchScreen.storyboard */,
@@ -231,7 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				449A169222077AA200DED54D /* RegistrationViewController.swift in Sources */,
-				44AA11F922063C610043BC77 /* CurrencyPair.swift in Sources */,
+				44AA11F922063C610043BC77 /* Constant.swift in Sources */,
 				44AA11E5220628E40043BC77 /* TickerViewController.swift in Sources */,
 				449A16962207839D00DED54D /* AlertViewController.swift in Sources */,
 				44AA11F522062FDC0043BC77 /* Ticker.swift in Sources */,
