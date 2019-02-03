@@ -38,6 +38,10 @@ extension ViewController {
     @IBAction func switchViewDidChangeValue(_ segmentedControl: UISegmentedControl) {
         tableView.reloadData()
     }
+
+    @IBAction private func dismiss(_ barButton: UIBarButtonItem) {
+        performSegue(withIdentifier: "UnwindSegueToLoginViewController", sender: self)
+    }
 }
 
 // MARK: - WebSocketDelegate

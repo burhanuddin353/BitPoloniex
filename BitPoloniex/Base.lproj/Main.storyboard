@@ -100,7 +100,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Eyp-kd-hyx">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="BoQ-Pu-5ef"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="BoQ-Pu-5ef">
+                            <connections>
+                                <action selector="dismiss:" destination="l0J-pD-M8J" id="1J0-wh-AmV"/>
+                            </connections>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="6ye-ci-zaz">
                             <rect key="frame" x="78.5" y="7" width="225" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -116,9 +120,11 @@
                     <connections>
                         <outlet property="switchViewSegmentedControl" destination="6ye-ci-zaz" id="nJ4-px-bje"/>
                         <outlet property="textField" destination="t3R-O9-EuP" id="EgJ-tr-VHd"/>
+                        <segue destination="QK8-Ws-eRd" kind="unwind" identifier="UnwindSegueToLoginViewController" unwindAction="unwindToLoginViewControllerWithSegue:" id="Qdq-KX-Aly"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAP-FG-lL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QK8-Ws-eRd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1054" y="-227"/>
         </scene>
@@ -287,8 +293,8 @@
                         <viewLayoutGuide key="safeArea" id="L9k-ku-ccJ"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="zpC-SD-tNT" id="qVj-EH-J52"/>
                         <outlet property="passwordTextField" destination="2Cz-rT-hnG" id="DHa-GH-g1l"/>
-                        <outlet property="usernameTextField" destination="zpC-SD-tNT" id="qVj-EH-J52"/>
                         <segue destination="YQ0-Lm-dFS" kind="presentation" identifier="TickerViewController" modalTransitionStyle="flipHorizontal" id="hhx-Fo-AJv"/>
                     </connections>
                 </viewController>
@@ -415,9 +421,24 @@
                                     <action selector="registerClicked:" destination="Vbw-Xd-k96" eventType="touchUpInside" id="SiO-H6-ohG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngT-MV-6J1">
+                                <rect key="frame" x="16" y="43" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9DX-ou-jHV"/>
+                                    <constraint firstAttribute="width" constant="44" id="Z3s-mA-Dr0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.2156862745" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissClicked:" destination="Vbw-Xd-k96" eventType="touchUpInside" id="eX9-F8-VcM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.13725490200000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ngT-MV-6J1" firstAttribute="leading" secondItem="vKI-tP-Rlh" secondAttribute="leading" constant="16" id="Ayf-qB-maA"/>
                             <constraint firstItem="3Il-t8-pVO" firstAttribute="top" secondItem="eo1-IM-ncP" secondAttribute="bottom" constant="20" id="JPq-6w-BLg"/>
                             <constraint firstItem="3Il-t8-pVO" firstAttribute="leading" secondItem="eo1-IM-ncP" secondAttribute="leading" id="ao3-P1-dLg"/>
                             <constraint firstItem="3jM-gM-AoK" firstAttribute="top" secondItem="vKI-tP-Rlh" secondAttribute="top" constant="30" id="bq6-FB-DQD"/>
@@ -425,16 +446,19 @@
                             <constraint firstItem="eo1-IM-ncP" firstAttribute="top" secondItem="3jM-gM-AoK" secondAttribute="bottom" constant="50" id="lKJ-Qn-gow"/>
                             <constraint firstItem="3jM-gM-AoK" firstAttribute="centerX" secondItem="Nic-v1-yFt" secondAttribute="centerX" id="mMO-bh-2xv"/>
                             <constraint firstItem="eo1-IM-ncP" firstAttribute="leading" secondItem="vKI-tP-Rlh" secondAttribute="leading" constant="40" id="nUS-cZ-beY"/>
+                            <constraint firstItem="ngT-MV-6J1" firstAttribute="centerY" secondItem="3jM-gM-AoK" secondAttribute="centerY" id="oD6-yX-EcA"/>
                             <constraint firstItem="vKI-tP-Rlh" firstAttribute="trailing" secondItem="eo1-IM-ncP" secondAttribute="trailing" constant="40" id="yZa-fS-fwo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vKI-tP-Rlh"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="BPf-Nz-bqO" id="B5N-32-mKT"/>
                         <outlet property="passwordTextField" destination="q0L-g5-RVz" id="xND-W3-Pvc"/>
-                        <outlet property="usernameTextField" destination="BPf-Nz-bqO" id="B5N-32-mKT"/>
+                        <segue destination="lWY-p3-ydx" kind="unwind" identifier="UnwindSegueToLoginViewController" unwindAction="unwindToLoginViewControllerWithSegue:" id="6oU-Rx-9e8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4u-zZ-OxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lWY-p3-ydx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="305" y="518"/>
         </scene>
