@@ -9,10 +9,11 @@
 import UIKit
 import Starscream
 
-class ViewController: UITableViewController {
+class TickerViewController: UITableViewController {
 
     @IBOutlet private weak var switchViewSegmentedControl: UISegmentedControl!
     @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var keybardToolbar: UIToolbar!
 
     private var socket = WebSocket(url: URL(string: "wss://api2.poloniex.com")!, protocols: ["chat"])
     private var currencyPairIDs = Constant.currencyPairIDs
@@ -22,6 +23,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        textField.inputAccessoryView = keybardToolbar
         socket.delegate = self
         socket.connect()
     }
@@ -33,19 +35,23 @@ class ViewController: UITableViewController {
 }
 
 // MARK: - IBActions
-extension ViewController {
+extension TickerViewController {
 
-    @IBAction func switchViewDidChangeValue(_ segmentedControl: UISegmentedControl) {
+    @IBAction private func switchViewDidChangeValue(_ segmentedControl: UISegmentedControl) {
         tableView.reloadData()
     }
 
     @IBAction private func dismiss(_ barButton: UIBarButtonItem) {
         performSegue(withIdentifier: "UnwindSegueToLoginViewController", sender: self)
     }
+
+    @IBAction private func dismissKeyboard(_ barButton: UIBarButtonItem) {
+        textField.endEditing(true)
+    }
 }
 
 // MARK: - WebSocketDelegate
-extension ViewController : WebSocketDelegate {
+extension TickerViewController : WebSocketDelegate {
     func websocketDidConnect(socket: WebSocketClient) {
         socket.write(string: "{\"command\": \"subscribe\", \"channel\": 1002}")
     }
@@ -70,7 +76,7 @@ extension ViewController : WebSocketDelegate {
 }
 
 // MARK: - TableView Delegate & DataSource
-extension ViewController {
+extension TickerViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currencyPairIDs.keys.count
@@ -136,7 +142,7 @@ extension ViewController {
 }
 
 // MARK: - TextField Delegate
-extension ViewController: UITextFieldDelegate {
+extension TickerViewController: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         tableView.reloadData()

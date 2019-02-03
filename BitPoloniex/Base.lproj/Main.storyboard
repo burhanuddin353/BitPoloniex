@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ticker View Controller-->
         <scene sceneID="K1R-Qm-ITf">
             <objects>
-                <tableViewController id="l0J-pD-M8J" customClass="ViewController" customModule="BitPoloniex" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="12h-sw-o5r">
+                <tableViewController id="l0J-pD-M8J" customClass="TickerViewController" customModule="BitPoloniex" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="12h-sw-o5r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -118,12 +118,25 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="keybardToolbar" destination="cn6-9x-tcq" id="OKL-yP-Ryz"/>
                         <outlet property="switchViewSegmentedControl" destination="6ye-ci-zaz" id="nJ4-px-bje"/>
                         <outlet property="textField" destination="t3R-O9-EuP" id="EgJ-tr-VHd"/>
                         <segue destination="QK8-Ws-eRd" kind="unwind" identifier="UnwindSegueToLoginViewController" unwindAction="unwindToLoginViewControllerWithSegue:" id="Qdq-KX-Aly"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAP-FG-lL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cn6-9x-tcq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fMG-kl-qtR"/>
+                        <barButtonItem systemItem="done" id="D0P-S2-JIz">
+                            <connections>
+                                <action selector="dismissKeyboard:" destination="l0J-pD-M8J" id="mR4-68-fzm"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
                 <exit id="QK8-Ws-eRd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1054" y="-227"/>

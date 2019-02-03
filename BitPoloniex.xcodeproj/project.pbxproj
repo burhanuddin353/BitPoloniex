@@ -13,7 +13,7 @@
 		449A169422077F0300DED54D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449A169322077F0300DED54D /* Network.swift */; };
 		449A16962207839D00DED54D /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449A16952207839D00DED54D /* AlertViewController.swift */; };
 		44AA11E3220628E40043BC77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11E2220628E40043BC77 /* AppDelegate.swift */; };
-		44AA11E5220628E40043BC77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11E4220628E40043BC77 /* ViewController.swift */; };
+		44AA11E5220628E40043BC77 /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA11E4220628E40043BC77 /* TickerViewController.swift */; };
 		44AA11E8220628E40043BC77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11E6220628E40043BC77 /* Main.storyboard */; };
 		44AA11EA220628E60043BC77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11E9220628E60043BC77 /* Assets.xcassets */; };
 		44AA11ED220628E60043BC77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA11EB220628E60043BC77 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 		449A16952207839D00DED54D /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		44AA11DF220628E40043BC77 /* BitPoloniex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitPoloniex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AA11E2220628E40043BC77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		44AA11E4220628E40043BC77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44AA11E4220628E40043BC77 /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
 		44AA11E7220628E40043BC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44AA11E9220628E60043BC77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44AA11EC220628E60043BC77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			children = (
 				44AA11E2220628E40043BC77 /* AppDelegate.swift */,
 				449A169322077F0300DED54D /* Network.swift */,
-				44AA11E4220628E40043BC77 /* ViewController.swift */,
+				44AA11E4220628E40043BC77 /* TickerViewController.swift */,
 				449A168F22077A8D00DED54D /* LoginViewController.swift */,
 				449A169122077AA200DED54D /* RegistrationViewController.swift */,
 				44AA11F422062FDC0043BC77 /* Ticker.swift */,
@@ -207,6 +207,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BitPoloniex/Pods-BitPoloniex-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -214,6 +215,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,7 +232,7 @@
 			files = (
 				449A169222077AA200DED54D /* RegistrationViewController.swift in Sources */,
 				44AA11F922063C610043BC77 /* CurrencyPair.swift in Sources */,
-				44AA11E5220628E40043BC77 /* ViewController.swift in Sources */,
+				44AA11E5220628E40043BC77 /* TickerViewController.swift in Sources */,
 				449A16962207839D00DED54D /* AlertViewController.swift in Sources */,
 				44AA11F522062FDC0043BC77 /* Ticker.swift in Sources */,
 				449A169022077A8D00DED54D /* LoginViewController.swift in Sources */,

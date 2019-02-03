@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.0)
+  - MBProgressHUD (1.1.0)
   - Starscream (3.0.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - MBProgressHUD (~> 1.1.0)
   - Starscream (~> 3.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - MBProgressHUD
     - Starscream
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 2fbf13e68658986261fb5611c606106339b93052
+PODFILE CHECKSUM: 05a90e2593ff71753cb9c6f333bb60c4eb708f60
 
 COCOAPODS: 1.5.3

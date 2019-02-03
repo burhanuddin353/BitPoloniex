@@ -61,7 +61,7 @@ class Network {
             }
 
             result.ifFailure {
-                completionHandler(.success(false))
+                completionHandler(.failure(result.error!))
             }
         }
     }
@@ -82,7 +82,7 @@ class Network {
             }
 
             result.ifFailure {
-                completionHandler(.success(false))
+                completionHandler(.failure(result.error!))
             }
         }
     }
